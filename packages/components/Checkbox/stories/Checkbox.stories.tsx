@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Checks } from 'phosphor-react';
-import { Typography } from "@tails-ui/typography";
+import { Label } from "@tails-ui/label";
 
 import { Checkbox, type CheckboxRootProps } from "../src/Checkbox";
 
@@ -11,6 +11,8 @@ export default {
     children: (
       <Checkbox.Icon />
     ),
+    id: 'terms',
+    name: 'terms'
   },
   argTypes: {
     children: {
@@ -23,9 +25,9 @@ export default {
     (Story) => (
       <div className="flex items-center gap-2">
         {Story()}
-        <Typography size="sm">
+        <Label htmlFor="terms" className="text-sm">
           Accept terms & conditions
-        </Typography>
+        </Label>
       </div>
     )
   ]

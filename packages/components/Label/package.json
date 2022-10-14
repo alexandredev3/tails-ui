@@ -1,5 +1,5 @@
 {
-  "name": "@tails-ui/checkbox",
+  "name": "@tails-ui/label",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
@@ -15,11 +15,9 @@
   },
   "dependencies": {
     "@tails-ui/styles": "*",
-    "@tails-ui/label": "*",
-    "@radix-ui/react-slot": "^1.0.0",
-    "@radix-ui/react-checkbox": "^1.0.0",
-    "clsx": "^1.2.1",
-    "phosphor-react": "^1.4.1"
+    "@tails-ui/text-input": "*",
+    "phosphor-react": "^1.4.1",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@tails-ui/eslint-config": "*",
