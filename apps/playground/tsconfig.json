@@ -1,0 +1,11 @@
+{
+  "extends": "@tails-ui/tsconfig/client.json",
+  "include": [
+    "./src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

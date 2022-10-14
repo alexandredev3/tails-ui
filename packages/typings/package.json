@@ -1,0 +1,20 @@
+{
+  "name": "@tails-ui/typings",
+  "version": "1.0.0",
+  "description": "",
+  "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tails-ui/tsconfig": "*",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6"
+  }
+}
