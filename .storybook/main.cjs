@@ -16,5 +16,12 @@ module.exports = {
       }
     }
   ],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/tails-ui/';
+    }
+
+    return config;
+  }
 }
