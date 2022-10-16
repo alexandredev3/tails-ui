@@ -27,6 +27,12 @@ export const Small: StoryObj<TextProps> = {
   }
 };
 
+export const Medium: StoryObj<TextProps> = {
+  args: {
+    size: "md",
+  },
+};
+
 export const Large: StoryObj<TextProps> = {
   args: {
     size: 'lg'

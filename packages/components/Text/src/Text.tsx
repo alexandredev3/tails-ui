@@ -8,21 +8,32 @@ export interface TextProps extends OverridableChildrenComponent {
   size?: TextSizes;
 }
 
-type TextContainerProps = TextProps & {
+type TextContainerProps = OverridableChildrenComponent & {
   as: string;
 };
 
-const sizes: { [key in TextSizes]: string } = {
+const TEXT_SIZES: { [key in TextSizes]: string } = {
   sm: "text-sm",
   md: "text-md",
   lg: "text-lg",
 };
 
-export function TextRoot({ children, className, ...rest }: TextProps) {
+const HEADING_SIZES: { [key in TextSizes]: string } = {
+  sm: "text-lg",
+  md: "text-xl",
+  lg: "text-2xl",
+};
+
+export function TextRoot({
+  children,
+  className,
+  size = "md",
+  ...rest
+}: TextProps) {
   return (
     <TextContainer
       as="span"
-      className={clsx(className, "text-gray-100")}
+      className={clsx(className, "text-gray-100", TEXT_SIZES[size])}
       {...rest}
     >
       {children}
@@ -30,11 +41,20 @@ export function TextRoot({ children, className, ...rest }: TextProps) {
   );
 }
 
-export function TextHeading({ children, className, ...rest }: TextProps) {
+export function TextHeading({
+  children,
+  className,
+  size = "md",
+  ...rest
+}: TextProps) {
   return (
     <TextContainer
       as="h2"
-      className={clsx(className, "text-gray-100 font-bold")}
+      className={clsx(
+        className,
+        "text-gray-100 font-bold",
+        HEADING_SIZES[size]
+      )}
       {...rest}
     >
       {children}
@@ -59,15 +79,10 @@ function TextContainer({
   children,
   className,
   as,
-  size = "md",
 }: TextContainerProps) {
   const Comp = asChild ? Slot : as;
 
-  return (
-    <Comp className={clsx(className, "font-sans", sizes[size])}>
-      {children}
-    </Comp>
-  );
+  return <Comp className={clsx(className, "font-sans")}>{children}</Comp>;
 }
 
 TextRoot.displayName = "Text";
