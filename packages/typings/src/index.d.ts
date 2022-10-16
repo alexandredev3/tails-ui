@@ -1,2 +1,2 @@
-export { CommonComponentProps, OverridableChildrenComponent } from './MappedComponentProps';
-export { Partialize } from './Partialize';
+export type * from './MappedComponentProps';
+export type * from './Partialize';

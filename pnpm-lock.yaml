@@ -49,9 +49,12 @@ importers:
   apps/playground:
     specifiers:
       '@tails-ui/button': '*'
+      '@tails-ui/checkbox': '*'
+      '@tails-ui/label': '*'
       '@tails-ui/styles': '*'
+      '@tails-ui/text': '*'
+      '@tails-ui/text-input': '*'
       '@tails-ui/tsconfig': '*'
-      '@tails-ui/typography': '*'
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       '@vitejs/plugin-react': ^2.1.0
@@ -64,8 +67,11 @@ importers:
       vite: ^3.1.0
     dependencies:
       '@tails-ui/button': link:../../packages/components/Button
+      '@tails-ui/checkbox': link:../../packages/components/Checkbox
+      '@tails-ui/label': link:../../packages/components/Label
       '@tails-ui/styles': link:../../packages/styles
-      '@tails-ui/typography': link:../../packages/components/Typography
+      '@tails-ui/text': link:../../packages/components/Text
+      '@tails-ui/text-input': link:../../packages/components/TextInput
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -149,37 +155,6 @@ importers:
       react: 18.2.0
       tailwindcss: 3.1.8_postcss@8.4.18
 
-  packages/components/Heading:
-    specifiers:
-      '@radix-ui/react-slot': ^1.0.0
-      '@tails-ui/eslint-config': '*'
-      '@tails-ui/styles': '*'
-      '@tails-ui/tsconfig': '*'
-      '@tails-ui/typings': '*'
-      '@types/react': ^18.0.17
-      '@types/react-dom': ^18.0.6
-      autoprefixer: ^10.4.12
-      clsx: ^1.2.1
-      eslint: ^7.32.0
-      postcss: ^8.4.18
-      react: ^18.2.0
-      tailwindcss: ^3.1.8
-    dependencies:
-      '@radix-ui/react-slot': 1.0.0_react@18.2.0
-      '@tails-ui/styles': link:../../styles
-      clsx: 1.2.1
-    devDependencies:
-      '@tails-ui/eslint-config': link:../../eslint-config
-      '@tails-ui/tsconfig': link:../../tsconfig
-      '@tails-ui/typings': link:../../typings
-      '@types/react': 18.0.21
-      '@types/react-dom': 18.0.6
-      autoprefixer: 10.4.12_postcss@8.4.18
-      eslint: 7.32.0
-      postcss: 8.4.18
-      react: 18.2.0
-      tailwindcss: 3.1.8_postcss@8.4.18
-
   packages/components/Label:
     specifiers:
       '@tails-ui/eslint-config': '*'
@@ -213,6 +188,37 @@ importers:
       react: 18.2.0
       tailwindcss: 3.1.8_postcss@8.4.18
 
+  packages/components/Text:
+    specifiers:
+      '@radix-ui/react-slot': ^1.0.0
+      '@tails-ui/eslint-config': '*'
+      '@tails-ui/styles': '*'
+      '@tails-ui/tsconfig': '*'
+      '@tails-ui/typings': '*'
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      autoprefixer: ^10.4.12
+      clsx: ^1.2.1
+      eslint: ^7.32.0
+      postcss: ^8.4.18
+      react: ^18.2.0
+      tailwindcss: ^3.1.8
+    dependencies:
+      '@radix-ui/react-slot': 1.0.0_react@18.2.0
+      '@tails-ui/styles': link:../../styles
+      clsx: 1.2.1
+    devDependencies:
+      '@tails-ui/eslint-config': link:../../eslint-config
+      '@tails-ui/tsconfig': link:../../tsconfig
+      '@tails-ui/typings': link:../../typings
+      '@types/react': 18.0.21
+      '@types/react-dom': 18.0.6
+      autoprefixer: 10.4.12_postcss@8.4.18
+      eslint: 7.32.0
+      postcss: 8.4.18
+      react: 18.2.0
+      tailwindcss: 3.1.8_postcss@8.4.18
+
   packages/components/TextInput:
     specifiers:
       '@radix-ui/react-slot': ^1.0.0
@@ -234,37 +240,6 @@ importers:
       '@tails-ui/styles': link:../../styles
       clsx: 1.2.1
       phosphor-react: 1.4.1_react@18.2.0
-    devDependencies:
-      '@tails-ui/eslint-config': link:../../eslint-config
-      '@tails-ui/tsconfig': link:../../tsconfig
-      '@tails-ui/typings': link:../../typings
-      '@types/react': 18.0.21
-      '@types/react-dom': 18.0.6
-      autoprefixer: 10.4.12_postcss@8.4.18
-      eslint: 7.32.0
-      postcss: 8.4.18
-      react: 18.2.0
-      tailwindcss: 3.1.8_postcss@8.4.18
-
-  packages/components/Typography:
-    specifiers:
-      '@radix-ui/react-slot': ^1.0.0
-      '@tails-ui/eslint-config': '*'
-      '@tails-ui/styles': '*'
-      '@tails-ui/tsconfig': '*'
-      '@tails-ui/typings': '*'
-      '@types/react': ^18.0.17
-      '@types/react-dom': ^18.0.6
-      autoprefixer: ^10.4.12
-      clsx: ^1.2.1
-      eslint: ^7.32.0
-      postcss: ^8.4.18
-      react: ^18.2.0
-      tailwindcss: ^3.1.8
-    dependencies:
-      '@radix-ui/react-slot': 1.0.0_react@18.2.0
-      '@tails-ui/styles': link:../../styles
-      clsx: 1.2.1
     devDependencies:
       '@tails-ui/eslint-config': link:../../eslint-config
       '@tails-ui/tsconfig': link:../../tsconfig

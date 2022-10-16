@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@tails-ui/button": "*",
-    "@tails-ui/typography": "*",
+    "@tails-ui/text": "*",
+    "@tails-ui/text-input": "*",
+    "@tails-ui/checkbox": "*",
+    "@tails-ui/label": "*",
     "@tails-ui/styles": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

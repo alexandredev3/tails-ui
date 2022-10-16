@@ -1,24 +1,22 @@
 import { Button } from '@tails-ui/button';
-import { Typography } from "@tails-ui/typography";
+import { Text } from "@tails-ui/text";
 
-function App() {
+import { Logo } from './components/Logo'
+
+import './styles/global.css';
+
+export function App() {
   return (
-    <div>
-      <Typography>
-        Hello World
-      </Typography>
+    <div className="w-screen h-screen bg-gray-900 flex items-center justify-center text-white">
+      <Logo />
 
-      <Typography>
-        <h1>
-          Hello World
-        </h1>
-      </Typography>
+      <Text.Heading>
+        React Tails UI
+      </Text.Heading>
 
-      <Button onClick={() => alert('Hello World')}>
-        <span>Click me</span>
-      </Button>
+      <Text>
+        
+      </Text>
     </div>
   )
 }
-
-export default App
