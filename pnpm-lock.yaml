@@ -59,6 +59,7 @@ importers:
       '@types/react-dom': ^18.0.6
       '@vitejs/plugin-react': ^2.1.0
       autoprefixer: ^10.4.12
+      phosphor-react: ^1.4.1
       postcss: ^8.4.18
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -72,6 +73,7 @@ importers:
       '@tails-ui/styles': link:../../packages/styles
       '@tails-ui/text': link:../../packages/components/Text
       '@tails-ui/text-input': link:../../packages/components/TextInput
+      phosphor-react: 1.4.1_react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:

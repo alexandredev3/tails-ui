@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@tails-ui/button": "*",
-    "@tails-ui/text": "*",
-    "@tails-ui/text-input": "*",
     "@tails-ui/checkbox": "*",
     "@tails-ui/label": "*",
     "@tails-ui/styles": "*",
+    "@tails-ui/text": "*",
+    "@tails-ui/text-input": "*",
+    "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
