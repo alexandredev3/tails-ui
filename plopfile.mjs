@@ -2,6 +2,10 @@ export default function (
   /**@type {import('plop').NodePlopAPI} */
   plop
 ) {
+  plop.setHelper('toLowerCase', function (text) {
+    return text.toLowerCase();
+  })
+
   plop.setGenerator('component', {
     description: 'Component generator',
     prompts: [
@@ -11,42 +15,46 @@ export default function (
         message: 'What is the component name?'
       }
     ],
-    actions: [
-      {
+    actions: function () {
+      const componetsDir = 'packages/components/';
+      const templatesDir = '.plop/templates/';
+      const components = [
+        {
+          path: '{{ name }}/src/{{ name }}.tsx',
+          templateFile: 'component/src/component.hbs'
+        },
+        {
+          path: '{{ name }}/src/index.ts',
+          templateFile: 'component/src/index.hbs'
+        },
+        {
+          path: '{{ name }}/stories/{{ name }}.stories.tsx',
+          templateFile: 'component/stories/story.hbs'
+        },
+        {
+          path: '{{ name }}/package.json',
+          templateFile: 'component/package.hbs'
+        },
+        {
+          path: '{{ name }}/postcss.config.cjs',
+          templateFile: 'component/postcss.config.hbs'
+        },
+        {
+          path: '{{ name }}/tailwind.config.cjs',
+          templateFile: 'component/tailwind.config.hbs'
+        },
+        {
+          path: '{{ name }}/tsconfig.json',
+          templateFile: 'component/tsconfig.hbs'
+        }
+      ]
+      const actions = components.map((component) => ({
         type: 'add',
-        path: 'packages/components/{{ name }}/src/{{ name }}.tsx',
-        templateFile: '.plop/templates/component/src/component.hbs'
-      },
-      {
-        type: 'add',
-        path: 'packages/components/{{ name }}/src/index.ts',
-        templateFile: '.plop/templates/component/src/index.hbs'
-      },
-      {
-        type: 'add',
-        path: 'packages/components/{{ name }}/stories/{{ name }}.stories.tsx',
-        templateFile: '.plop/templates/component/stories/story.hbs'
-      },
-      {
-        type: 'add',
-        path: 'packages/components/{{ name }}/package.json',
-        templateFile: '.plop/templates/component/package.hbs'
-      },
-      {
-        type: 'add',
-        path: 'packages/components/{{ name }}/postcss.config.cjs',
-        templateFile: '.plop/templates/component/postcss.config.hbs'
-      },
-      {
-        type: 'add',
-        path: 'packages/components/{{ name }}/tailwind.config.cjs',
-        templateFile: '.plop/templates/component/tailwind.config.hbs'
-      },
-      {
-        type: 'add',
-        path: 'packages/components/{{ name }}/tsconfig.json',
-        templateFile: '.plop/templates/component/tsconfig.hbs'
-      },
-    ]
+        path: componetsDir + component.path,
+        templateFile: templatesDir + component.templateFile,
+      }))
+
+      return actions;
+    }
   });
 }

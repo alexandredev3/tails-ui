@@ -89,6 +89,35 @@ importers:
       typescript: 4.8.4
       vite: 3.1.7
 
+  packages/components/Alert:
+    specifiers:
+      '@tails-ui/eslint-config': '*'
+      '@tails-ui/styles': '*'
+      '@tails-ui/tsconfig': '*'
+      '@tails-ui/typings': '*'
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      autoprefixer: ^10.4.12
+      clsx: ^1.2.1
+      eslint: ^7.32.0
+      postcss: ^8.4.18
+      react: ^18.2.0
+      tailwindcss: ^3.2.1
+    dependencies:
+      '@tails-ui/styles': link:../../styles
+      clsx: 1.2.1
+    devDependencies:
+      '@tails-ui/eslint-config': link:../../eslint-config
+      '@tails-ui/tsconfig': link:../../tsconfig
+      '@tails-ui/typings': link:../../typings
+      '@types/react': 18.0.21
+      '@types/react-dom': 18.0.6
+      autoprefixer: 10.4.12_postcss@8.4.18
+      eslint: 7.32.0
+      postcss: 8.4.18
+      react: 18.2.0
+      tailwindcss: 3.2.1_postcss@8.4.18
+
   packages/components/Button:
     specifiers:
       '@radix-ui/react-slot': ^1.0.0
