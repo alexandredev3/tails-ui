@@ -1,6 +1,7 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
+    "outDir": "./dist",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
