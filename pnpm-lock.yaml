@@ -4,17 +4,17 @@ importers:
 
   .:
     specifiers:
-      '@storybook/addon-a11y': ^6.5.12
-      '@storybook/addon-essentials': ^6.5.12
-      '@storybook/addon-interactions': ^6.5.12
-      '@storybook/addon-links': ^6.5.12
+      '@storybook/addon-a11y': ^6.5.15
+      '@storybook/addon-essentials': ^6.5.15
+      '@storybook/addon-interactions': ^6.5.15
+      '@storybook/addon-links': ^6.5.15
       '@storybook/addon-postcss': ^2.0.0
-      '@storybook/addons': ^6.5.12
+      '@storybook/addons': ^6.5.15
       '@storybook/builder-vite': ^0.2.4
-      '@storybook/react': ^6.5.12
+      '@storybook/react': ^6.5.15
       '@storybook/storybook-deployer': ^2.8.12
       '@storybook/testing-library': ^0.0.13
-      '@storybook/theming': ^6.5.12
+      '@storybook/theming': ^6.5.15
       '@tails-ui/eslint-config': workspace:*
       '@tails-ui/styles': workspace:*
       autoprefixer: ^10.4.12

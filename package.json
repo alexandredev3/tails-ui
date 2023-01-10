@@ -1,6 +1,6 @@
 {
   "name": "tails-ui",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -18,17 +18,17 @@
     "playground": "pnpm --filter @tails-ui/playground dev"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^6.5.12",
-    "@storybook/addon-essentials": "^6.5.12",
-    "@storybook/addon-interactions": "^6.5.12",
-    "@storybook/addon-links": "^6.5.12",
+    "@storybook/addon-a11y": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addons": "^6.5.12",
+    "@storybook/addons": "^6.5.15",
     "@storybook/builder-vite": "^0.2.4",
-    "@storybook/react": "^6.5.12",
+    "@storybook/react": "^6.5.15",
     "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/testing-library": "^0.0.13",
-    "@storybook/theming": "^6.5.12",
+    "@storybook/theming": "^6.5.15",
     "@tails-ui/eslint-config": "workspace:*",
     "@tails-ui/styles": "workspace:*",
     "autoprefixer": "^10.4.12",
@@ -43,7 +43,7 @@
     "react-dom": "^18.2.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "<=16.19.0"
   },
   "packageManager": "pnpm@7.9.5"
 }
