@@ -11,6 +11,7 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "plop": "plop",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
@@ -37,7 +38,9 @@
     "sb": "^6.5.12",
     "tailwindcss": "^3.2.1",
     "turbo": "latest",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "engines": {
     "node": ">=14.0.0"

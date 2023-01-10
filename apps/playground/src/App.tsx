@@ -8,6 +8,7 @@ import { Checkbox } from "@tails-ui/checkbox";
 
 import { Logo } from "./components/Logo";
 
+import "@tails-ui/styles/common.css";
 import "./styles/global.css";
 
 export function App() {

@@ -1,5 +1,3 @@
-import '@tails-ui/styles/common.css';
-
 export {
   TextInput,
   type TextInputRootProps,
