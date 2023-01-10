@@ -13,7 +13,7 @@
 
 <p align="center">
     <a href="https://github.com/alexandredev3/tails-ui/actions"><img src="https://img.shields.io/github/actions/workflow/status/alexandredev3/tails-ui/deploy-docs.yaml?branch=main" alt="Components Storybook Docs"></a>
-    <a href="https://github.com/alexandredev3/tails-ui/blob/master/LICENSE"><img src="https://img.shields.io/github/license/alexandredev3/tails-ui" alt="License"></a>
+    <a href="https://github.com/alexandredev3/tails-ui/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/alexandredev3/tails-ui" alt="License"></a>
 </p>
 
 ## Documentation
