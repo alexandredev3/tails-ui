@@ -13,12 +13,12 @@ import "./styles/global.css";
 
 export function App() {
   return (
-    <div className="w-screen flex flex-col items-center justify-center text-white">
+    <div className="w-screen h-screen flex flex-col items-center justify-center text-white">
       <header className="flex flex-col items-center">
         <Logo />
 
         <Text.Heading size="lg" className="mt-4">
-          React Tails UI
+          Tails UI Playground
         </Text.Heading>
 
         <Text size="lg" className="text-gray-400 mt-1">
