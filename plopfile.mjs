@@ -1,10 +1,25 @@
+const capitalize = (str) => {
+  return `${str.charAt(0).toUpperCase()}${str.slice(1)}` 
+}
+
+const toLowerCase = (str) => {
+  return str.toLowerCase();
+}
+
+const COMPONENTS_DIR = 'packages/components';
+const TEMPLATES_DIR = '.plop/templates';
+
 export default function (
   /**@type {import('plop').NodePlopAPI} */
   plop
 ) {
   plop.setHelper('toLowerCase', function (text) {
-    return text.toLowerCase();
-  })
+    return toLowerCase(text);
+  });
+
+  plop.setHelper('capitalize', function (text) {
+    return capitalize(text);
+  });
 
   plop.setGenerator('component', {
     description: 'Component generator',
@@ -13,46 +28,35 @@ export default function (
         type: 'input',
         name: 'name',
         message: 'What is the component name?'
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'What is the component description?'
+      },
+      {
+        type: 'input',
+        name: 'authorName',
+        message: 'What is the author name?'
+      },
+      {
+        type: 'input',
+        name: 'authorEmail',
+        message: 'What is the author Email?'
       }
     ],
-    actions: function () {
-      const componetsDir = 'packages/components/';
-      const templatesDir = '.plop/templates/';
-      const components = [
-        {
-          path: '{{ name }}/src/{{ name }}.tsx',
-          templateFile: 'component/src/component.hbs'
+    actions: function (answers) {
+      const actions = [];
+
+      actions.push({
+        type: 'addMany',
+        destination: `${COMPONENTS_DIR}/{{ capitalize name }}`,
+        templateFiles: `${TEMPLATES_DIR}/**`,
+        data: {
+          ...answers
         },
-        {
-          path: '{{ name }}/src/index.ts',
-          templateFile: 'component/src/index.hbs'
-        },
-        {
-          path: '{{ name }}/stories/{{ name }}.stories.tsx',
-          templateFile: 'component/stories/story.hbs'
-        },
-        {
-          path: '{{ name }}/package.json',
-          templateFile: 'component/package.hbs'
-        },
-        {
-          path: '{{ name }}/postcss.config.cjs',
-          templateFile: 'component/postcss.config.hbs'
-        },
-        {
-          path: '{{ name }}/tailwind.config.cjs',
-          templateFile: 'component/tailwind.config.hbs'
-        },
-        {
-          path: '{{ name }}/tsconfig.json',
-          templateFile: 'component/tsconfig.hbs'
-        }
-      ]
-      const actions = components.map((component) => ({
-        type: 'add',
-        path: componetsDir + component.path,
-        templateFile: templatesDir + component.templateFile,
-      }))
+        base: '.plop/templates/component'
+      });
 
       return actions;
     }

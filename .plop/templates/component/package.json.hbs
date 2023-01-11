@@ -1,14 +1,23 @@
 {
   "name": "@tails-ui/{{toLowerCase name}}",
   "version": "1.0.0",
-  "description": "",
+  "description": "{{ description }}",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src --dts"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "{{ authorName }} <{{ authorEmail }}>",
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandredev3/tails-ui",
+    "directory": "packages/components/Button"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "react": ">=17",
     "react-dom": ">=17",

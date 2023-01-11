@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src --dts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Alexandre Costa <contado.alexandre.costa@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandredev3/tails-ui",
+    "directory": "packages/components/Button"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "react": ">=17",
     "react-dom": ">=17",
