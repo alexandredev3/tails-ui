@@ -1,73 +1,87 @@
-# Turborepo starter
+<p align="center">
+  <a href="https://tails-ui-playground.vercel.app" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alexandredev3/tails-ui/HEAD/.github/logo.svg">
+      <img alt="Tails UI" src="https://raw.githubusercontent.com/alexandredev3/tails-ui/HEAD/.github/logo.svg" width="350" height="70" style="max-width: 100%;">
+    </picture>
+  </a>
+</p>
 
-This is an official pnpm starter turborepo.
+<p align="center">
+  A Design System for TailwindCSS
+</p>
 
-## What's inside?
+<p align="center">
+    <a href="https://github.com/alexandredev3/tails-ui/actions"><img src="https://img.shields.io/github/actions/workflow/status/alexandredev3/tails-ui/deploy-docs.yaml?branch=main" alt="Components Storybook Docs"></a>
+    <a href="https://github.com/alexandredev3/tails-ui/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/alexandredev3/tails-ui" alt="License"></a>
+</p>
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+## Documentation
 
-### Apps and Packages
+To see all the available components and usages, visit <a href="https://alexandredev3.github.io/tails-ui">alexandredev3.github.io/tails-ui.com</a>
+> Visit <a href="https://tails-ui-playground.vercel.app/">https://tails-ui-playground.vercel.app/</a> to play around with the demo.
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+## Usage
+Follow these steps to start using the components:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
+1. Install <a href="https://tailwindcss.com/docs/installation">TailwindCSS</a> in your existing React project.
+```bash
+$ npm install -D tailwindcss
+$ npx tailwindcss init
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
+2. Install Tails UI styles in your project.
+```bash
+$ npm install @tails-ui/styles
 ```
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
+3. Install the components that you want to use in your project.
+```bash
+$ npm install @tails-ui/checkbox @tails-ui/button
 ```
-cd my-turborepo
-pnpm dlx turbo login
-```
+Tails UI allows you to download only those components that you really need in your project.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-pnpm dlx turbo link
+4. Add the Tails UI plugin to your project `tailwind.config.js` file.
+```cjs
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    '**/*.tsx'
+  ],
+  plugins: [require('@tails-ui/styles/plugin')]
+}
 ```
 
-## Useful Links
+5. Import the Tails UI CSS file in your app entry point.
+```tsx
+import "@tails-ui/styles/common.css";
 
-Learn more about the power of Turborepo:
+export function App() {
+  //...
+}
+```
 
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+6. Now you can start to use the components!
+```tsx
+function Example() {
+  return (
+    <main>
+      <div className="flex items-center gap-2">
+        <Checkbox
+          id="terms"
+          name="terms"
+        >
+          <Checkbox.Icon />
+        </Checkbox>
+        <Label
+          className="text-sm"
+          htmlFor="terms"
+        >
+          Accept terms & conditions
+        </Label>
+      </div>
+    </main>
+  );
+}
+```
+## Contributing
