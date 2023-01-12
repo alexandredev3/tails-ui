@@ -1,7 +1,8 @@
 <p align="center">
   <a href="https://tails-ui-playground.vercel.app" target="_blank">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alexandredev3/tails-ui/HEAD/.github/logo.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alexandredev3/tails-ui/HEAD/.github/logo-beta.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/alexandredev3/tails-ui/HEAD/.github/logo-beta.svg">
       <img alt="Tails UI" src="https://raw.githubusercontent.com/alexandredev3/tails-ui/HEAD/.github/logo.svg" width="350" height="70" style="max-width: 100%;">
     </picture>
   </a>
