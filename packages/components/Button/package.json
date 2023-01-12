@@ -8,8 +8,13 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsup src --watch",
+    "clean": "rimraf dist .turbo",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
     "build": "tsup src --dts"
   },
+  "clean-package": "../../../clean-package.config.json",
   "keywords": [],
   "author": "Alexandre Costa <contado.alexandre.costa@gmail.com>",
   "repository": {

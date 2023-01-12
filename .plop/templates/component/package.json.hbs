@@ -5,8 +5,13 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsup src --watch",
+    "clean": "rimraf dist .turbo",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
     "build": "tsup src --dts"
   },
+  "clean-package": "../../../clean-package.config.json",
   "files": [
     "dist"
   ],
@@ -15,7 +20,7 @@
     "repository": {
     "type": "git",
     "url": "git+https://github.com/alexandredev3/tails-ui",
-    "directory": "packages/components/Button"
+    "directory": "packages/components/{{ capitalize name }}"
   },
   "license": "MIT",
   "peerDependencies": {
