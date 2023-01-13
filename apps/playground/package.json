@@ -12,7 +12,7 @@
     "@tails-ui/button": "*",
     "@tails-ui/checkbox": "*",
     "@tails-ui/label": "*",
-    "@tails-ui/styles": "*",
+    "@tails-ui/plugin": "*",
     "@tails-ui/text": "*",
     "@tails-ui/text-input": "*",
     "phosphor-react": "^1.4.1",

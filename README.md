@@ -31,9 +31,9 @@ $ npm install -D tailwindcss
 $ npx tailwindcss init
 ```
 
-2. Install Tails UI styles in your project.
+2. Install Tails UI Tailwind plugin in your project.
 ```bash
-$ npm install @tails-ui/styles
+$ npm install @tails-ui/plugin
 ```
 
 3. Install the components that you want to use in your project.
@@ -49,20 +49,10 @@ module.exports = {
   content: [
     '**/*.tsx'
   ],
-  plugins: [require('@tails-ui/styles/plugin')]
+  plugins: [require('@tails-ui/plugin')]
 }
 ```
-
-5. Import the Tails UI CSS file in your app entry point.
-```tsx
-import "@tails-ui/styles/common.css";
-
-export function App() {
-  //...
-}
-```
-
-6. Now you can start to use the components!
+5. Now you can start to use the components!
 ```tsx
 function Example() {
   return (

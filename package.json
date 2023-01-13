@@ -31,6 +31,7 @@
     "@storybook/theming": "^6.5.15",
     "@tails-ui/eslint-config": "workspace:*",
     "@tails-ui/styles": "workspace:*",
+    "@tails-ui/plugin": "workspace:*",
     "autoprefixer": "^10.4.12",
     "clean-package": "^2.2.0",
     "plop": "^3.1.1",

@@ -3,5 +3,5 @@ module.exports = {
   content: [
     '**/*.tsx'
   ],
-  plugins: [require('@tails-ui/styles/plugin')]
+  plugins: [require('@tails-ui/plugin')]
 }
