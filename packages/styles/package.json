@@ -1,6 +1,6 @@
 {
   "name": "@tails-ui/styles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./plugin.js",
   "private": false,
   "description": "Styles for Tails UI components",
