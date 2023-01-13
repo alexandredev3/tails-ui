@@ -1,6 +1,10 @@
 {
   "name": "@tails-ui/styles",
   "version": "1.0.0",
+  "main": "plugin.js",
+  "exports": [
+    "./common.css"
+  ],
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
