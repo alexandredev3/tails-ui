@@ -2,6 +2,7 @@
   "name": "@tails-ui/styles",
   "version": "1.0.0",
   "main": "plugin.js",
+  "private": false,
   "exports": [
     "./common.css"
   ],
