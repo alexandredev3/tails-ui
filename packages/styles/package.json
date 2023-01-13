@@ -3,10 +3,6 @@
   "version": "1.0.1",
   "main": "./plugin.js",
   "private": false,
-  "exports": {
-    "./plugin.js": "./plugin.js",
-    "./common.css": "./common.css"
-  },
   "description": "Styles for Tails UI components",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
