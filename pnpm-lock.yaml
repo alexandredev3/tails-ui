@@ -65,7 +65,7 @@ importers:
       '@tails-ui/button': '*'
       '@tails-ui/checkbox': '*'
       '@tails-ui/label': '*'
-      '@tails-ui/styles': '*'
+      '@tails-ui/plugin': '*'
       '@tails-ui/text': '*'
       '@tails-ui/text-input': '*'
       '@tails-ui/tsconfig': '*'
@@ -84,7 +84,7 @@ importers:
       '@tails-ui/button': link:../../packages/components/Button
       '@tails-ui/checkbox': link:../../packages/components/Checkbox
       '@tails-ui/label': link:../../packages/components/Label
-      '@tails-ui/styles': link:../../packages/styles
+      '@tails-ui/plugin': link:../../packages/plugin
       '@tails-ui/text': link:../../packages/components/Text
       '@tails-ui/text-input': link:../../packages/components/TextInput
       phosphor-react: 1.4.1_react@18.2.0
