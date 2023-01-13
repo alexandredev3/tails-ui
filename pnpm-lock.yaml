@@ -18,11 +18,13 @@ importers:
       '@tails-ui/eslint-config': workspace:*
       '@tails-ui/styles': workspace:*
       autoprefixer: ^10.4.12
+      clean-package: ^2.2.0
       plop: ^3.1.1
       postcss: ^8.4.18
       prettier: latest
       react: ^18.2.0
       react-dom: ^18.2.0
+      rimraf: ^3.0.2
       sb: ^6.5.12
       tailwindcss: ^3.2.1
       tsup: ^6.5.0
@@ -43,11 +45,13 @@ importers:
       '@tails-ui/eslint-config': link:packages/eslint-config
       '@tails-ui/styles': link:packages/styles
       autoprefixer: 10.4.13_postcss@8.4.21
+      clean-package: 2.2.0
       plop: 3.1.1
       postcss: 8.4.21
       prettier: 2.8.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      rimraf: 3.0.2
       sb: 6.5.15_o4scbtliisanygemawej7x2d6i
       tailwindcss: 3.2.4_postcss@8.4.21
       tsup: 6.5.0_k22f457wtryv7dv7ltdlwpdpdm
@@ -6960,6 +6964,13 @@ packages:
       source-map: 0.6.1
     dev: true
 
+  /clean-package/2.2.0:
+    resolution: {integrity: sha512-vLv8kRqvh4smPDpqAYFPLEijTppAd/cfCz4yBcUGoVl/JKu6ZWKhlo+G/cAmwlSa29RudfBeuyiNEzas8bTwEQ==}
+    hasBin: true
+    dependencies:
+      dot-prop: 6.0.1
+    dev: true
+
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -7783,6 +7794,13 @@ packages:
   /dot-prop/5.3.0:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
+    dependencies:
+      is-obj: 2.0.0
+    dev: true
+
+  /dot-prop/6.0.1:
+    resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
+    engines: {node: '>=10'}
     dependencies:
       is-obj: 2.0.0
     dev: true

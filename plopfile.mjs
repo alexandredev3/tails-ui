@@ -1,8 +1,14 @@
-const capitalize = (str) => {
+const capitalize = (
+  /**@type {string} */
+  str
+) => {
   return `${str.charAt(0).toUpperCase()}${str.slice(1)}` 
 }
 
-const toLowerCase = (str) => {
+const toLowerCase = (
+  /**@type {string} */
+  str
+) => {
   return str.toLowerCase();
 }
 
@@ -45,7 +51,10 @@ export default function (
         message: 'What is the author Email?'
       }
     ],
-    actions: function (answers) {
+    actions: function (
+      /**@type {{ name: string; description: string; authorName: string; authorEmail: string; }} */
+      answers
+    ) {
       const actions = [];
 
       actions.push({
