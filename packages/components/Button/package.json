@@ -12,7 +12,7 @@
     "clean": "rimraf dist .turbo",
     "prepack": "clean-package",
     "postpack": "clean-package restore",
-    "build": "tsup src --dts"
+    "build": "pnpm clean && tsup src --config ../../../scripts/tsup.config.ts --dts"
   },
   "clean-package": "../../../clean-package.config.json",
   "keywords": [],
@@ -38,6 +38,7 @@
     "@tails-ui/eslint-config": "*",
     "@tails-ui/typings": "*",
     "@tails-ui/tsconfig": "*",
+    "@tails-ui/test-utils": "*",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.12",
