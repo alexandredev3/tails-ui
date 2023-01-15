@@ -8,7 +8,6 @@ export default {
   component: TextInput,
   args: {
     className: 'w-full',
-    children: <TextInput.Input placeholder="Type your e-mail address" />
   },
   argTypes: {
     children: {
@@ -25,7 +24,11 @@ export default {
   },
 } as Meta<TextInputRootProps>;
 
-export const Default: StoryObj<TextInputRootProps> = {};
+export const Default: StoryObj<TextInputRootProps> = {
+  args: {
+    placeholder: 'Type your e-mail address'
+  }
+};
 
 export const StartIcon: StoryObj<TextInputRootProps> = {
   args: {

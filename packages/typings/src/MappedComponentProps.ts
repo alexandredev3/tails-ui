@@ -4,7 +4,7 @@ export interface OverridableChildrenComponent extends CommonComponentProps {
   asChild?: boolean;
 }
 
-export interface CommonComponentProps {
+export interface CommonComponentProps<TChildren extends React.ReactNode = React.ReactNode> {
   className?: string;
-  children: React.ReactNode;
+  children?: TChildren;
 }
