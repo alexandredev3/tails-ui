@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { SignIn, SignOut } from 'phosphor-react';
 
-import { Button, ButtonProps } from '../src/Button';
+import { Button, ButtonRootProps } from '../src/Button';
 
 export default {
   title: 'Components / Button',
@@ -10,6 +11,38 @@ export default {
     className: 'w-full'
   },
   argTypes: {}
-} as Meta<ButtonProps>;
+} as Meta<ButtonRootProps>;
 
-export const Default: StoryObj<ButtonProps> = {};
+export const Default: StoryObj<ButtonRootProps> = {};
+
+export const Icon: StoryObj<ButtonRootProps> = {
+  args: {
+    children: [
+      <Button.Icon>
+        <SignOut />
+      </Button.Icon>
+    ]
+  }
+}
+
+export const StartIcon: StoryObj<ButtonRootProps> = {
+  args: {
+    children: [
+      <Button.Icon>
+        <SignIn />
+      </Button.Icon>,
+      "SignIn"
+    ]
+  }
+}
+
+export const EndIcon: StoryObj<ButtonRootProps> = {
+  args: {
+    children: [
+      "SignOut",
+      <Button.Icon>
+        <SignOut />
+      </Button.Icon>
+    ]
+  }
+}

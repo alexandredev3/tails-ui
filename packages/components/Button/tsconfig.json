@@ -1,10 +1,5 @@
 {
   "extends": "@tails-ui/tsconfig/client.json",
-  "compilerOptions": {
-    "types": [
-      "react"
-    ]
-  },
   "include": [
     "."
   ],
