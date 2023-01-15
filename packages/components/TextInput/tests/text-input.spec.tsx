@@ -1,6 +1,6 @@
 import { describe, it } from "vitest";
 import { a11y } from "@tails-ui/test-utils";
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { Envelope } from "phosphor-react";
 import { Lock } from "phosphor-react";
 
@@ -30,6 +30,19 @@ describe("Rendering a TextInput component", () => {
       "type",
       "password"
     );
+  });
+
+  it("should be able to focus on the input", () => {
+    const { getByTestId } = render(
+      <TextInput data-testid="text-input" placeholder="Type your address" />
+    );    
+    const input = getByTestId("text-input");
+
+    act(() => {
+      input?.focus();
+    });
+
+    expect(input).toHaveFocus();
   });
 });
 

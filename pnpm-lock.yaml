@@ -24,6 +24,7 @@ importers:
       '@types/react': ^18.0.17
       '@types/testing-library__jest-dom': ^5.14.5
       '@vitejs/plugin-react': ^2.1.0
+      '@vitest/ui': ^0.27.1
       autoprefixer: ^10.4.12
       clean-package: ^2.2.0
       jest-axe: ^7.0.0
@@ -61,6 +62,7 @@ importers:
       '@types/react': 18.0.21
       '@types/testing-library__jest-dom': 5.14.5
       '@vitejs/plugin-react': 2.2.0
+      '@vitest/ui': 0.27.1
       autoprefixer: 10.4.13_postcss@8.4.21
       clean-package: 2.2.0
       jest-axe: 7.0.0
@@ -76,7 +78,7 @@ importers:
       tsup: 6.5.0_k22f457wtryv7dv7ltdlwpdpdm
       turbo: 1.7.0
       typescript: 4.9.4
-      vitest: 0.27.1_jsdom@21.0.0
+      vitest: 0.27.1_zwkpxmik6dbjndwkkyoqb6z7xq
 
   apps/playground:
     specifiers:
@@ -3416,6 +3418,10 @@ packages:
       webpack: 5.75.0
     dev: true
 
+  /@polka/url/1.0.0-next.21:
+    resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: true
+
   /@radix-ui/primitive/1.0.0:
     resolution: {integrity: sha512-3e7rn8FDMin4CgeL7Z/49smCA3rFYY3Ha2rUQ7HRWFadS5iCRw08ZgVT1LaNTCNqgvrUiyczLflrVrF0SRQtNA==}
     dependencies:
@@ -5541,6 +5547,14 @@ packages:
       react-refresh: 0.14.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@vitest/ui/0.27.1:
+    resolution: {integrity: sha512-o9LmWY/XyWt5Pqb+bLLK+N3Vk+PP2jqrdDDMEAY43dB6vtZ+gYuOt5IutUfB7gXeJ6xeIlzUZ/OabrR3leldCA==}
+    dependencies:
+      fast-glob: 3.2.12
+      flatted: 3.2.7
+      sirv: 2.0.2
     dev: true
 
   /@webassemblyjs/ast/1.11.1:
@@ -11924,6 +11938,11 @@ packages:
       run-queue: 1.0.3
     dev: true
 
+  /mrmime/1.0.1:
+    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
+    engines: {node: '>=10'}
+    dev: true
+
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
 
@@ -14340,6 +14359,15 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
+  /sirv/2.0.2:
+    resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@polka/url': 1.0.0-next.21
+      mrmime: 1.0.1
+      totalist: 3.0.0
+    dev: true
+
   /sisteransi/1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
@@ -14923,6 +14951,8 @@ packages:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
@@ -14948,7 +14978,6 @@ packages:
       quick-lru: 5.1.1
       resolve: 1.22.1
     transitivePeerDependencies:
-      - postcss
       - ts-node
     dev: true
 
@@ -15205,6 +15234,11 @@ packages:
   /toidentifier/1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
+    dev: true
+
+  /totalist/3.0.0:
+    resolution: {integrity: sha512-eM+pCBxXO/njtF7vdFsHuqb+ElbxqtI4r5EAvk6grfAFyJ6IvWlSkfZ5T9ozC6xWw3Fj1fGoSmrl0gUs46JVIw==}
+    engines: {node: '>=6'}
     dev: true
 
   /tough-cookie/4.1.2:
@@ -15900,7 +15934,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.27.1_jsdom@21.0.0:
+  /vitest/0.27.1_zwkpxmik6dbjndwkkyoqb6z7xq:
     resolution: {integrity: sha512-1sIpQ1DVFTEn7c1ici1XHcVfdU4nKiBmPtPAtGKJJJLuJjojTv/OHGgcf69P57alM4ty8V4NMv+7Yoi5Cxqx9g==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -15925,6 +15959,7 @@ packages:
       '@types/chai': 4.3.4
       '@types/chai-subset': 1.3.3
       '@types/node': 18.11.18
+      '@vitest/ui': 0.27.1
       acorn: 8.8.1
       acorn-walk: 8.2.0
       cac: 6.7.14
