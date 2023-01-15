@@ -16,7 +16,9 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "playground": "pnpm --filter @tails-ui/playground dev",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest dev --reporter verbose --allowOnly",
+    "test:ui": "pnpm test:watch --ui",
+    "test:debugger": "ndb pnpm test:watch"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^6.5.15",
@@ -39,6 +41,7 @@
     "@types/react": "^18.0.17",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/ui": "^0.27.1",
     "autoprefixer": "^10.4.12",
     "clean-package": "^2.2.0",
     "jest-axe": "^7.0.0",

@@ -12,8 +12,8 @@ const toLowerCase = (
   return str.toLowerCase();
 }
 
-const COMPONENTS_DIR = 'packages/components';
-const TEMPLATES_DIR = '.plop/templates';
+const COMPONENTS_DIR = '../packages/components';
+const TEMPLATES_DIR = '../.plop/templates';
 
 export default function (
   /**@type {import('plop').NodePlopAPI} */
@@ -64,7 +64,7 @@ export default function (
         data: {
           ...answers
         },
-        base: '.plop/templates/component'
+        base: `${TEMPLATES_DIR}/component`
       });
 
       return actions;
