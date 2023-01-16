@@ -260,6 +260,7 @@ importers:
       '@radix-ui/react-slot': ^1.0.0
       '@tails-ui/eslint-config': '*'
       '@tails-ui/styles': '*'
+      '@tails-ui/test-utils': '*'
       '@tails-ui/tsconfig': '*'
       '@tails-ui/typings': '*'
       '@types/react': ^18.0.17
@@ -276,6 +277,7 @@ importers:
       clsx: 1.2.1
     devDependencies:
       '@tails-ui/eslint-config': link:../../eslint-config
+      '@tails-ui/test-utils': link:../../utils/test-utils
       '@tails-ui/tsconfig': link:../../tsconfig
       '@tails-ui/typings': link:../../typings
       '@types/react': 18.0.21
@@ -14951,8 +14953,6 @@ packages:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
-    peerDependencies:
-      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
@@ -14978,6 +14978,7 @@ packages:
       quick-lru: 5.1.1
       resolve: 1.22.1
     transitivePeerDependencies:
+      - postcss
       - ts-node
     dev: true
 
