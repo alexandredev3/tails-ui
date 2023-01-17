@@ -16,6 +16,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "playground": "pnpm --filter @tails-ui/playground dev",
+    "test": "vitest run --reporter verbose",
     "test:watch": "vitest dev --reporter verbose --allowOnly",
     "test:ui": "pnpm test:watch --ui",
     "test:debugger": "ndb pnpm test:watch"
