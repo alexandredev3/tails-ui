@@ -31,9 +31,9 @@ $ npm install -D tailwindcss
 $ npx tailwindcss init
 ```
 
-2. Install Tails UI Tailwind plugin in your project.
+2. Install the Tails UI Tailwind plugin as a dev dependency on your project.
 ```bash
-$ npm install @tails-ui/plugin
+$ npm install -D @tails-ui/plugin 
 ```
 
 3. Install the components that you want to use in your project.
@@ -46,13 +46,21 @@ Tails UI allows you to download only those components that you really need in yo
 ```cjs
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    '**/*.tsx'
-  ],
   plugins: [require('@tails-ui/plugin')]
 }
 ```
-5. Now you can start to use the components!
+
+5. Add the Tails UI components template path to your `tailwind.config.js` file.
+```cjs
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./node_modules/@tails-ui/**/*.js"
+  ],
+}
+```
+
+6. Now you can start to use the components!
 ```tsx
 function Example() {
   return (
