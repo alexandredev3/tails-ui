@@ -1,11 +1,14 @@
 {
   "name": "@tails-ui/button",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "A React button component",
   "main": "src/index.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsup src --watch",
