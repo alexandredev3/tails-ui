@@ -8,6 +8,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@tails-ui/storybook-mdx-docs",
     {
       name: "@storybook/addon-postcss",
       options: {

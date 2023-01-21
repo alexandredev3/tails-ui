@@ -1,0 +1,26 @@
+{
+  "name": "@tails-ui/storybook-mdx-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "author": "Alexandre Costa <contado.alexandre.costa@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandredev3/tails-ui",
+    "directory": "packages/components/Button"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "build": "pnpm clean && tsup src --dts",
+    "dev": "tsup src --watch"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@tails-ui/tsconfig": "*"
+  }
+}
