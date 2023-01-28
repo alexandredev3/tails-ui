@@ -2,7 +2,7 @@
   "name": "@tails-ui/storybook-mdx-docs",
   "version": "1.0.0",
   "description": "",
-  "main": "./index.js",
+  "main": "./loader.js",
   "author": "Alexandre Costa <contado.alexandre.costa@gmail.com>",
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "@tails-ui/tsconfig": "*"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.2.1"
   }
 }
