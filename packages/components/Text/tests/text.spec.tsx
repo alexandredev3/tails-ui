@@ -79,20 +79,21 @@ describe("Rendering a custom Text component", () => {
   });
 
   it("should appear on the screen with the given child element as the parent element", async () => {
-    const { getByTestId } = render(
-      <div data-testid="text-container">
-        <Text asChild>
-          <p>Lorem ipsum</p>
-        </Text>
-      </div>
+    render(
+      <Text asChild>
+        <p>Lorem ipsum</p>
+      </Text>
     );
 
-    expect(screen.queryByText(/Lorem ipsum/)).not.toBeNull();
-    expect(getByTestId("text-container")).toContainHTML(
-      '<p class="text-gray-100 text-md font-sans">Lorem ipsum</p>'
-    );
-    expect(getByTestId("text-container")).not.toContainHTML(
-      '<span class="text-gray-100 text-md font-sans"><p>Lorem ipsum</p></span>'
-    );
+    const element = screen.queryByText(/Lorem ipsum/);
+
+    expect(element).not.toBeNull();
+    expect(element).toMatchInlineSnapshot(`
+      <p
+        class="text-gray-100 text-md font-sans"
+      >
+        Lorem ipsum
+      </p>
+    `);
   });
 });
