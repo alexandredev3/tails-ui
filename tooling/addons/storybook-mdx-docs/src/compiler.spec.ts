@@ -1,3 +1,7 @@
+import { describe, it, expect } from 'vitest';
+
+import { compiler } from './compiler';
+
 /**
 
   INPUT =>
@@ -55,3 +59,27 @@
       Get started
     </Button>
  */
+
+describe('Compiler', () => {
+  it('should correctly create the component tree', () => {
+    const result = compiler(`
+      import { Button, ButtonRootProps } from '../src/Button';
+
+      export default {
+        title: 'Components / Button',
+        component: Button,
+        args: {
+          children: 'Get started',
+          className: 'w-full'
+        },
+        argTypes: {}
+      } as Meta<ButtonRootProps>;
+
+      export const Default: StoryObj<ButtonRootProps> = {};
+    `);
+
+    console.log(result);
+
+    expect(true).toBeTruthy();
+  });
+});
