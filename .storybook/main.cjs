@@ -8,6 +8,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@tails-ui/storybook-mdx-docs",
     {
       name: "@storybook/addon-postcss",
       options: {
@@ -22,6 +23,23 @@ module.exports = {
     if (configType === 'PRODUCTION') {
       config.base = '/tails-ui/';
     }
+
+    return config;
+  },
+  webpackFinal: async (config) => {
+    const rules = config.module.rules || [];
+
+    rules.push({
+        test: /\.(stories|story)\.tsx$/,
+        use: [
+          {
+            loader: require.resolve('@tails-ui/storybook-mdx-docs/loader'),
+            options: {}
+          }
+        ]
+    });
+
+    config.module.rules = rules;
 
     return config;
   }

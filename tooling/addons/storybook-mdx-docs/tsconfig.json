@@ -1,0 +1,11 @@
+{
+  "extends": "@tails-ui/tsconfig/client.json",
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ]
+}
